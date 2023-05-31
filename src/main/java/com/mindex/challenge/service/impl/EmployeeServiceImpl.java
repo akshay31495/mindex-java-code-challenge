@@ -17,6 +17,11 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
 
+    
+    /** 
+     * @param employee
+     * @return Employee
+     */
     @Override
     public Employee create(Employee employee) {
         LOG.debug("Creating employee [{}]", employee);
@@ -27,6 +32,11 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employee;
     }
 
+    
+    /** 
+     * @param id
+     * @return Employee
+     */
     @Override
     public Employee read(String id) {
         LOG.debug("Creating employee with id [{}]", id);
@@ -40,10 +50,16 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employee;
     }
 
+    
+    /** 
+     * @param employee
+     * @return Employee
+     */
     @Override
     public Employee update(Employee employee) {
         LOG.debug("Updating employee [{}]", employee);
 
         return employeeRepository.save(employee);
     }
+    
 }
