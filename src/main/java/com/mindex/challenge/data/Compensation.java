@@ -6,9 +6,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 public class Compensation {
 
 
-    @Min(value=0,message="should be a positive number")
+    @Min(value=0,message="employeeId should be a positive number")
     private String employeeId;
-    @Min(value=0,message="should be a positive number")
+    @Min(value=0,message="salary should be a positive number")
     private float salary;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private String effectiveDate;
