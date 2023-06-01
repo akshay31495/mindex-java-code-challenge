@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class Compensation {
 
+
+    @Min(value=0,message="should be a positive number")
     private String employeeId;
     @Min(value=0,message="should be a positive number")
     private float salary;
